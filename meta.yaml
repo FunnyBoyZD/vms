@@ -1,0 +1,23 @@
+package:
+  name: vms-assignment
+  version: "7.0"
+
+source:
+  git_rev: 6.7
+  git_url:
+
+requirements:
+  build:
+    - c++
+    - setuptools
+
+  run:
+    - c++
+
+test:
+  imports:
+    - vms-assignment
+    - boost
+
+about:
+  home:
