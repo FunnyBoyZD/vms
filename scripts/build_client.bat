@@ -1,0 +1,1 @@
+cmake --build .\..\cmake-build-debug --target vmsclient -j 30

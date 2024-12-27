@@ -1,0 +1,1 @@
+.\..\cmake-build-debug\out\bin\vmsclient.exe
