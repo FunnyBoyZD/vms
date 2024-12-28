@@ -19,36 +19,22 @@ To start the services, go to the `scripts` directory:
 cd .\scripts\
 ```
 
-Then you need to build the binaries using the scripts below:
-* For vmsclient:
-   ```shell
-   .\build_client.bat
-   ```
-
-* For vmsserver:
-   ```shell
-   .\build_server.bat
-   ```
-  
-* For both:
-   ```shell
-   .\build_services.bat
-   ```
-
-Then to start the client, run the following script:
+Then to start the server, run the following script:
 ```shell
-.\run_client.bat
+.\run_server.bat 
 ```
 
-And to start the server, proceed to run the script below:
+And to start the client, proceed to run the script below:
 ```shell
-.\run_server.bat
+.\run_client.bat
 ```
 
 Or just run the script below to start both services:
 ```shell
 .\run_services.bat
 ```
+
+***P.S.: Do not forget to build the binaries before trying to run them***
 
 Once the client establishes connection to the server, you can start typing commands in its CMD like this:
 ```
