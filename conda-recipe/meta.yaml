@@ -1,0 +1,30 @@
+package:
+  name: vmsapp
+  version: 1.0.1
+
+source:
+  path: ../
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  run:
+    - vs2022_win-64
+
+build:
+  script: |
+    mkdir %PREFIX%\bin
+    mkdir %PREFIX%\bin\scripts
+    mkdir %PREFIX%\bin\build
+    mkdir %PREFIX%\bin\build\out
+    mkdir %PREFIX%\bin\build\out\bin
+    copy "%SRC_DIR%\build\out\bin\vmsclient.exe" "%PREFIX%\bin\build\out\bin"
+    copy "%SRC_DIR%\build\out\bin\vmsserver.exe" "%PREFIX%\bin\build\out\bin"
+    copy "%SRC_DIR%\scripts\run_client.bat" "%PREFIX%\bin\scripts"
+    copy "%SRC_DIR%\scripts\run_server.bat" "%PREFIX%\bin\scripts"
+    copy "%SRC_DIR%\scripts\run_services.bat" "%PREFIX%\bin\scripts"
+
+about:
+  home: "https://github.com/FunnyBoyZD/vms"
+  license: MIT
+  summary: "VMS application"
